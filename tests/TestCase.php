@@ -3,8 +3,8 @@
 namespace Nanopkg\LaravelSettings\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use Nanopkg\LaravelSettings\LaravelSettingsServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {
