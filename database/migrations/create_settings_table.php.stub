@@ -6,14 +6,34 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
-        Schema::create('laravel-settings_table', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
-
-            // add fields
-
+            $table->string('key')->unique();
+            $table->string('display_name');
+            $table->longText('value');
+            $table->text('details')->nullable()->default(null);
+            $table->string('type');
+            $table->integer('order')->default('1');
+            $table->string('group')->nullable();
             $table->timestamps();
         });
+    }
+
+
+   /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('settings');
     }
 };
