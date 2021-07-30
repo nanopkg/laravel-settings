@@ -19,7 +19,7 @@ class LaravelSettingsServiceProvider extends PackageServiceProvider
             ->name('laravel-settings')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-settings_table')
+            ->hasMigration('create_settings_table')
             ->hasCommand(LaravelSettingsCommand::class);
     }
 }
