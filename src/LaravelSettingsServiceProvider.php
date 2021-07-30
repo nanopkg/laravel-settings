@@ -2,9 +2,9 @@
 
 namespace Nanopkg\LaravelSettings;
 
+use Nanopkg\LaravelSettings\Commands\LaravelSettingsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Nanopkg\LaravelSettings\Commands\LaravelSettingsCommand;
 
 class LaravelSettingsServiceProvider extends PackageServiceProvider
 {
